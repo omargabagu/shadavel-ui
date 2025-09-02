@@ -10,7 +10,7 @@ Para poder usar un componente, descarga y pega la carpeta del componente en `res
 
 Con descripción:
 
-\```blade
+```blade
 <x-input 
     description="Descripcion del input (opcional)" 
     type="text" 
@@ -18,17 +18,17 @@ Con descripción:
     label="Texto de la etiqueta (opcional)" 
     required 
 />
-\```
+```
 
 Sin descripción:
 
-\```blade
+```blade
 <x-input 
     type="text" 
     name="autor" 
     required 
 />
-\```
+```
 
 ---
 
@@ -40,14 +40,14 @@ Este componente Blade genera un `<select>` con búsqueda integrada, ideal para l
 
 ### ✅ Uso básico
 
-\```blade
+```blade
 <x-select-search-tw
     label="Área:"
     inputid="area_id"
     :required="true"
     :options="$areas"
 />
-\```
+```
 
 ---
 
@@ -68,20 +68,20 @@ Este componente Blade genera un `<select>` con búsqueda integrada, ideal para l
 
 ### ✨ Ejemplo en formulario de creación
 
-\```blade
+```blade
 <x-select-search-tw
     label="Área:"
     inputid="area_id"
     :required="true"
     :options="$areas"
 />
-\```
+```
 
 ---
 
 ### ✏️ Ejemplo en formulario de edición
 
-\```blade
+```blade
 <x-select-search-tw
     label="Área:"
     inputid="area_id"
@@ -90,13 +90,13 @@ Este componente Blade genera un `<select>` con búsqueda integrada, ideal para l
     relationid="{{ old('area_id', $post->area_id) }}"
     relationdisplay="{{ old('area_id_display', $post->area->name ?? '') }}"
 />
-\```
+```
 
 ---
 
 ### 🧠 Backend — Controlador
 
-\```php
+```php
 public function create()
 {
     $areas = Area::select('id', 'name')->get();
@@ -105,7 +105,7 @@ public function create()
         'areas' => $areas,
     ]);
 }
-\```
+```
 
 ---
 
