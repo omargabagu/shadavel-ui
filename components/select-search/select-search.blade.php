@@ -50,9 +50,7 @@
 
         @foreach($options as $item)
             <div class="{{ $inputid }}-option px-3 py-2 hover:bg-gray-100 cursor-pointer text-sm text-gray-800"
-                 data-value="{{ is_array($item) ? $item['id'] : $item->id }}">
-                {{ is_array($item) ? $item[$displaycolumn] : $item->$displaycolumn }}
-            </div>
+                 data-value="{{ is_array($item) ? $item['id'] : $item->id }}">{{ is_array($item) ? $item[$displaycolumn] : $item->$displaycolumn }}</div>
         @endforeach
     </div>
 </div>
